@@ -6,3 +6,19 @@ from utils.mi_entrada_salida import MiEntradaSalida
 
 def solicitar_edad():
     return MiEntradaSalida.leer_entero_en_rango("introduce tu edad entre 0 y 100", 0, 100)
+
+
+def informe_edad():
+    edad = solicitar_edad()
+    if edad >= 0 and edad <= 12:
+        print("Eres un niño")
+    elif edad >= 13 and edad <= 17:
+        print("eres un adolescente")
+    elif edad >= 18 and edad <= 29:
+        print("eres jovencito")
+    else:
+        print("Ya eres un adulto")
+
+
+if __name__ == '__main__':
+    informe_edad()
