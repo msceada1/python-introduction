@@ -44,4 +44,50 @@ def solicitar_escritura():
         return False
 
 
+def calcular_precio_final(tarta):
+    if tarta == "m":
+        nata = solicitar_nata()
+        escritura = solicitar_escritura()
+        if nata == True and escritura == True:
+            print("El precio final es de ", PRECIO_TARTA_MANZANA + PRECIO_NATA + PRECIO_ESCRITURA)
+        elif nata == True:
+            print("El precio final es de ", PRECIO_TARTA_MANZANA + PRECIO_NATA)
+        elif escritura == True:
+            print("El precio final es de ", PRECIO_TARTA_MANZANA + PRECIO_ESCRITURA)
+        else:
+            print("El precio final es de ", PRECIO_TARTA_MANZANA)
+    elif tarta == "f":
+        nata = solicitar_nata()
+        escritura = solicitar_escritura()
+        if nata == True and escritura == True:
+            print("El precio final es de ", PRECIO_TARTA_FRESA + PRECIO_NATA + PRECIO_ESCRITURA)
+        elif nata == True:
+            print("El precio final es de ", PRECIO_TARTA_FRESA + PRECIO_NATA)
+        elif escritura == True:
+            print("El precio final es de ", PRECIO_TARTA_FRESA + PRECIO_ESCRITURA)
+        else:
+            print("El precio final es de ", PRECIO_TARTA_FRESA)
+    elif tarta == "cb":
+        nata = solicitar_nata()
+        escritura = solicitar_escritura()
+        if nata == True and escritura == True:
+            print("El precio final es de ", PRECIO_TARTA_CHOCOLATE_BLANCO + PRECIO_NATA + PRECIO_ESCRITURA)
+        elif nata == True:
+            print("El precio final es de ", PRECIO_TARTA_CHOCOLATE_BLANCO + PRECIO_NATA)
+        elif escritura == True:
+            print("El precio final es de ", PRECIO_TARTA_CHOCOLATE_BLANCO + PRECIO_ESCRITURA)
+        else:
+            print("El precio final es de ", PRECIO_TARTA_CHOCOLATE_BLANCO)
+    else:
+        nata = solicitar_nata()
+        escritura = solicitar_escritura()
+        if nata == True and escritura == True:
+            print("El precio final es de ", PRECIO_TARTA_CHOCOLATE_NEGRO + PRECIO_NATA + PRECIO_ESCRITURA)
+        elif nata == True:
+            print("El precio final es de ", PRECIO_TARTA_CHOCOLATE_NEGRO + PRECIO_NATA)
+        elif escritura == True:
+            print("El precio final es de ", PRECIO_TARTA_CHOCOLATE_NEGRO + PRECIO_ESCRITURA)
+        else:
+            print("El precio final es de ", PRECIO_TARTA_CHOCOLATE_NEGRO)
+
 #def programa():
