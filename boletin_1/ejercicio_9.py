@@ -19,7 +19,7 @@ PRECIO_ESCRITURA = 2.75
 
 
 def solicitar_tarta():
-    tarta = input("¿Que tarta deseas? M-Manzana, F-Fresa, CN-Chocolate Negro, CB-Chocolate Blanco").lower()
+    tarta = input("¿Que tarta deseas? M-Manzana, F-Fresa, CN-Chocolate Negro, CB-Chocolate Blanco:\n").lower()
 
     while tarta != "m" and tarta != "f" and tarta != "cn" and tarta != "cb":
         print("Por favor, seleccione un tipo de tarta")
@@ -29,7 +29,7 @@ def solicitar_tarta():
 
 
 def solicitar_nata():
-    respuesta = MiEntradaSalida.leer_caracter_sn("desea añadir nata a la tarta?").lower()
+    respuesta = MiEntradaSalida.leer_caracter_sn("desea añadir nata a la tarta(s/n)?").lower()
     if respuesta == 's':
         return True
     else:
@@ -37,7 +37,7 @@ def solicitar_nata():
 
 
 def solicitar_escritura():
-    respuesta = MiEntradaSalida.leer_caracter_sn("desea escribir algun nombre en la tarta?").lower()
+    respuesta = MiEntradaSalida.leer_caracter_sn("desea escribir algun nombre en la tarta(s/n)?").lower()
     if respuesta == 's':
         return True
     else:
@@ -90,4 +90,6 @@ def calcular_precio_final(tarta):
         else:
             print("El precio final es de ", PRECIO_TARTA_CHOCOLATE_NEGRO)
 
-#def programa():
+if __name__ == '__main__':
+    tarta = solicitar_tarta()
+    calcular_precio_final(tarta)
