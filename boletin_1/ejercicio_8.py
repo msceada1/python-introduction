@@ -27,9 +27,14 @@ def programa():
     elif caracter == '*':
         print(numero_1 * numero_2)
     elif caracter == '/':
-        print(numero_1 / numero_2)
+        if numero_2 == 0:
+            print("Error, no se puede dividir por 0")
+            return
+        else:
+            print(numero_1 / numero_2)
     else:
         print("ERROR")
+
 
 if __name__ == '__main__':
     programa()
